@@ -1,7 +1,7 @@
 import os,json,datetime as dt,pathlib,urllib.request,urllib.error,re,html
 from zoneinfo import ZoneInfo
 P=pathlib.Path(__file__).parent
-MODEL='gemini-2.5-flash'
+MODEL='gemini-3.8-flash'
 TOPICS='희소성과 기회비용|수요와 공급|시장균형|가격탄력성|생산비와 한계비용|경쟁과 독점|외부효과|공공재|세금의 효과|비교우위와 무역|명목과 실질|소비자물가지수|근원물가|실업률|경기순환|재정정책|정부부채|통화량|은행과 신용창조|통화정책 전달경로|금리의 기간구조|장단기 금리차|채권 만기와 듀레이션|신용위험|환율 결정|경상수지|자본 이동|환헤지|기업 매출과 이익|재무상태표|현금흐름|PER|PBR|ROE|배당과 자사주|복리|위험과 수익률|분산투자|지수와 추적오차|시장 기대와 경제지표|고용보고서|중앙은행 회의 읽기|공급 충격|수요 충격|스태그플레이션|경제성장과 생산성'.split('|')
 def read(name,default):
     f=P/name
