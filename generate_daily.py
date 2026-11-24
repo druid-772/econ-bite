@@ -51,6 +51,11 @@ def main():
                 x.update(date=day,source={k:n[k] for k in ('title','url','source','published')}); state['briefings'].append(x)
             state['attempts'][key]='ok'
         except Exception as e:
-            state['attempts'][key]='failed'; print(kind, type(e).__name__, 'retaining previous content')
+            state['attempts'][key] = 'failed'
+            if isinstance(e, urllib.error.HTTPError):
+                print(kind, 'HTTP status:', e.code)
+            else:
+                print(kind, type(e).__name__)
+            print('Retaining previous content')
         save('daily.json',state)
 if __name__=='__main__': main()
