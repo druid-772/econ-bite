@@ -46,6 +46,8 @@
   ],
   "briefings": [],
   "attempts": {
-    "2026-11-25:lesson": "ok"
+    "2026-11-25:lesson": "ok",
+    "2026-11-26:lesson": "failed",
+    "2026-11-26:news": "failed"
   }
 }
